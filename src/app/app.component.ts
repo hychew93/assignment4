@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assignment4';
+  evenNumbers: number[] = [];
+  oddNumbers: number[] = [];
+  // tslint:disable-next-line:typedef
+  onStartInterval(firednumber: number){
+    if (firednumber % 2 === 0 ){
+      this.evenNumbers.push(firednumber);
+    }else{
+      this.oddNumbers.push(firednumber);
+    }
+  }
 }
